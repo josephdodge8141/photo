@@ -1,0 +1,14 @@
+services:
+  photo-sharing:
+    build: ./photos
+    ports:
+      - "3000:80"
+    volumes:
+      - ./photos:/usr/share/nginx/html
+  ngrok:
+    command: 'http --url=https://helpful-awaited-sawfly.ngrok-free.app host.docker.internal:3000'
+    image: ngrok/ngrok
+    environment:
+      - NGROK_AUTHTOKEN=2v5q23msrxDvD85gzlJIstEDLSM_73dJNkHXjXnfiBBBcxKKN
+    tty: true
+    stdin_open: true

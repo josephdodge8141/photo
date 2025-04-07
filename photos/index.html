@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Share Your Memories</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div id="upload-section">
+            <h1>Share Your Memories</h1>
+            <div class="upload-container">
+                <label for="file-upload" class="custom-button">Upload</label>
+                <input type="file" id="file-upload" multiple accept="image/*">
+            </div>
+            <div id="preview-container" class="hidden">
+                <div id="image-preview"></div>
+                <div id="button-container">
+                    <button id="save-button" class="custom-button">Save</button>
+                </div>
+            </div>
+            <div id="loading-section" class="hidden">
+                <h2>Sending your memories...</h2>
+                <div class="loader"></div>
+            </div>
+        </div>
+        <div id="thank-you-section" class="hidden">
+            <h1>Thank You!</h1>
+            <p>Your memories have been shared.</p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
